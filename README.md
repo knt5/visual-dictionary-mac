@@ -1,2 +1,3 @@
-# visual-dictionary-mac-
-Visual dictionary app
+# Visual dictionary
+
+Visual dictionary for Mac

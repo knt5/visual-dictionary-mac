@@ -1,3 +1,1 @@
-# Visual dictionary
-
-Visual dictionary for Mac
+# Visual dictionary for Mac

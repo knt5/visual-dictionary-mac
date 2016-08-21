@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6198" systemVersion="14A297b" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6198"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -641,12 +642,12 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="VisualDictionary" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
         </scene>
-        <!--Window Controller - Window-->
+        <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
@@ -667,15 +668,92 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="VisualDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <splitView ambiguous="YES" misplaced="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frk-K8-aod">
+                                <rect key="frame" x="20" y="20" width="760" height="530"/>
+                                <subviews>
+                                    <customView ambiguous="YES" misplaced="YES" id="0dc-fF-9p7">
+                                        <rect key="frame" x="0.0" y="0.0" width="377" height="530"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21r-dw-xNO">
+                                                <rect key="frame" x="-2" y="-3" width="382" height="26"/>
+                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="m7w-BK-5Qy" id="gxp-Xq-YBk">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="menu"/>
+                                                    <menu key="menu" id="Cjv-z3-ial">
+                                                        <items>
+                                                            <menuItem title="Item 1" state="on" id="m7w-BK-5Qy"/>
+                                                            <menuItem title="Item 2" id="XhH-U2-euy"/>
+                                                            <menuItem title="Item 3" id="JgH-wR-xaM"/>
+                                                        </items>
+                                                    </menu>
+                                                </popUpButtonCell>
+                                            </popUpButton>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="21r-dw-xNO" secondAttribute="trailing" id="0tF-8R-MUM"/>
+                                            <constraint firstItem="21r-dw-xNO" firstAttribute="leading" secondItem="0dc-fF-9p7" secondAttribute="leading" id="aRY-55-NGG"/>
+                                            <constraint firstAttribute="bottom" secondItem="21r-dw-xNO" secondAttribute="bottom" id="mec-Cy-tNm"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView ambiguous="YES" misplaced="YES" id="y19-RC-DBm">
+                                        <rect key="frame" x="387" y="0.0" width="373" height="530"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pu6-fw-Tae">
+                                                <rect key="frame" x="-2" y="-3" width="378" height="26"/>
+                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dT9-1X-Zfr" id="88x-E3-uyb">
+                                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                                    <font key="font" metaFont="menu"/>
+                                                    <menu key="menu" id="9vT-fR-a9v">
+                                                        <items>
+                                                            <menuItem title="Item 1" state="on" id="dT9-1X-Zfr"/>
+                                                            <menuItem title="Item 2" id="9A8-qp-Zvi"/>
+                                                            <menuItem title="Item 3" id="MV9-F9-0fs"/>
+                                                        </items>
+                                                    </menu>
+                                                </popUpButtonCell>
+                                            </popUpButton>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="pu6-fw-Tae" firstAttribute="leading" secondItem="y19-RC-DBm" secondAttribute="leading" id="AXz-ST-vUm"/>
+                                            <constraint firstAttribute="bottom" secondItem="pu6-fw-Tae" secondAttribute="bottom" id="PIA-PL-6P5"/>
+                                            <constraint firstAttribute="trailing" secondItem="pu6-fw-Tae" secondAttribute="trailing" id="s32-rz-hoy"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <holdingPriorities>
+                                    <real value="250"/>
+                                    <real value="250"/>
+                                </holdingPriorities>
+                            </splitView>
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-p9-Jam">
+                                <rect key="frame" x="20" y="558" width="760" height="22"/>
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="q4Y-Bo-CgL">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </searchFieldCell>
+                            </searchField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="frk-K8-aod" secondAttribute="trailing" constant="20" id="87z-4S-Loq"/>
+                            <constraint firstAttribute="trailing" secondItem="EgW-p9-Jam" secondAttribute="trailing" constant="20" id="Inl-fR-p6F"/>
+                            <constraint firstItem="EgW-p9-Jam" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="bzh-XX-qTX"/>
+                            <constraint firstAttribute="bottom" secondItem="frk-K8-aod" secondAttribute="bottom" constant="20" id="enc-oT-YZ7"/>
+                            <constraint firstItem="frk-K8-aod" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="q1O-Vw-v5l"/>
+                            <constraint firstItem="frk-K8-aod" firstAttribute="top" secondItem="EgW-p9-Jam" secondAttribute="bottom" constant="8" id="wZE-DS-cp5"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="840"/>
         </scene>
     </scenes>
 </document>

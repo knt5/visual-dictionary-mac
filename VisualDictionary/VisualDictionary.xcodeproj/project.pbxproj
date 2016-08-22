@@ -13,6 +13,7 @@
 		1888E7B61D672F9B0013ED39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1888E7B41D672F9B0013ED39 /* Main.storyboard */; };
 		1888E7C11D672F9B0013ED39 /* VisualDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7C01D672F9B0013ED39 /* VisualDictionaryTests.swift */; };
 		1888E7CC1D672F9B0013ED39 /* VisualDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7CB1D672F9B0013ED39 /* VisualDictionaryUITests.swift */; };
+		18CC3F271D6B346300140D34 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CC3F261D6B346300140D34 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		1888E7C71D672F9B0013ED39 /* VisualDictionaryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VisualDictionaryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1888E7CB1D672F9B0013ED39 /* VisualDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDictionaryUITests.swift; sourceTree = "<group>"; };
 		1888E7CD1D672F9B0013ED39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18CC3F261D6B346300140D34 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CC3F271D6B346300140D34 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		1888E7A21D672F9A0013ED39 = {
 			isa = PBXGroup;
 			children = (
+				18CC3F261D6B346300140D34 /* WebKit.framework */,
 				1888E7AD1D672F9A0013ED39 /* VisualDictionary */,
 				1888E7BF1D672F9B0013ED39 /* VisualDictionaryTests */,
 				1888E7CA1D672F9B0013ED39 /* VisualDictionaryUITests */,
@@ -389,6 +393,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VisualDictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.knt5.VisualDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -401,6 +406,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = VisualDictionary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.knt5.VisualDictionary;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -475,6 +481,7 @@
 				1888E7D21D672F9B0013ED39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1888E7D31D672F9B0013ED39 /* Build configuration list for PBXNativeTarget "VisualDictionaryTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +490,7 @@
 				1888E7D51D672F9B0013ED39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1888E7D61D672F9B0013ED39 /* Build configuration list for PBXNativeTarget "VisualDictionaryUITests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +499,7 @@
 				1888E7D81D672F9B0013ED39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

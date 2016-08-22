@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="10117"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,10 +674,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <splitView ambiguous="YES" misplaced="YES" arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frk-K8-aod">
+                            <splitView arrangesAllSubviews="NO" dividerStyle="paneSplitter" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="frk-K8-aod">
                                 <rect key="frame" x="20" y="20" width="760" height="530"/>
                                 <subviews>
-                                    <customView ambiguous="YES" misplaced="YES" id="0dc-fF-9p7">
+                                    <customView id="0dc-fF-9p7">
                                         <rect key="frame" x="0.0" y="0.0" width="377" height="530"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
@@ -694,14 +695,24 @@
                                                     </menu>
                                                 </popUpButtonCell>
                                             </popUpButton>
+                                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="OiN-Tv-bWS">
+                                                <rect key="frame" x="0.0" y="29" width="377" height="501"/>
+                                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                                    <nil key="identifier"/>
+                                                </webPreferences>
+                                            </webView>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="21r-dw-xNO" secondAttribute="trailing" id="0tF-8R-MUM"/>
+                                            <constraint firstItem="21r-dw-xNO" firstAttribute="top" secondItem="OiN-Tv-bWS" secondAttribute="bottom" constant="8" id="Bz1-TR-fcs"/>
                                             <constraint firstItem="21r-dw-xNO" firstAttribute="leading" secondItem="0dc-fF-9p7" secondAttribute="leading" id="aRY-55-NGG"/>
                                             <constraint firstAttribute="bottom" secondItem="21r-dw-xNO" secondAttribute="bottom" id="mec-Cy-tNm"/>
+                                            <constraint firstItem="OiN-Tv-bWS" firstAttribute="leading" secondItem="21r-dw-xNO" secondAttribute="leading" id="n4f-3H-LTP"/>
+                                            <constraint firstItem="OiN-Tv-bWS" firstAttribute="trailing" secondItem="21r-dw-xNO" secondAttribute="trailing" id="p9x-DS-wWe"/>
+                                            <constraint firstItem="OiN-Tv-bWS" firstAttribute="top" secondItem="0dc-fF-9p7" secondAttribute="top" id="zf9-XU-viy"/>
                                         </constraints>
                                     </customView>
-                                    <customView ambiguous="YES" misplaced="YES" id="y19-RC-DBm">
+                                    <customView id="y19-RC-DBm">
                                         <rect key="frame" x="387" y="0.0" width="373" height="530"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
@@ -719,10 +730,20 @@
                                                     </menu>
                                                 </popUpButtonCell>
                                             </popUpButton>
+                                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="dX2-zD-BoK">
+                                                <rect key="frame" x="0.0" y="29" width="373" height="501"/>
+                                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                                    <nil key="identifier"/>
+                                                </webPreferences>
+                                            </webView>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstItem="dX2-zD-BoK" firstAttribute="trailing" secondItem="pu6-fw-Tae" secondAttribute="trailing" id="5le-gD-nbg"/>
                                             <constraint firstItem="pu6-fw-Tae" firstAttribute="leading" secondItem="y19-RC-DBm" secondAttribute="leading" id="AXz-ST-vUm"/>
+                                            <constraint firstItem="pu6-fw-Tae" firstAttribute="top" secondItem="dX2-zD-BoK" secondAttribute="bottom" constant="8" id="LwP-pl-5O4"/>
                                             <constraint firstAttribute="bottom" secondItem="pu6-fw-Tae" secondAttribute="bottom" id="PIA-PL-6P5"/>
+                                            <constraint firstItem="dX2-zD-BoK" firstAttribute="top" secondItem="y19-RC-DBm" secondAttribute="top" id="fKO-YZ-nNQ"/>
+                                            <constraint firstItem="dX2-zD-BoK" firstAttribute="leading" secondItem="pu6-fw-Tae" secondAttribute="leading" id="iBe-PK-Xq1"/>
                                             <constraint firstAttribute="trailing" secondItem="pu6-fw-Tae" secondAttribute="trailing" id="s32-rz-hoy"/>
                                         </constraints>
                                     </customView>
@@ -732,7 +753,7 @@
                                     <real value="250"/>
                                 </holdingPriorities>
                             </splitView>
-                            <searchField wantsLayer="YES" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-p9-Jam">
+                            <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-p9-Jam">
                                 <rect key="frame" x="20" y="558" width="760" height="22"/>
                                 <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="q4Y-Bo-CgL">
                                     <font key="font" metaFont="system"/>
@@ -746,6 +767,7 @@
                             <constraint firstAttribute="trailing" secondItem="EgW-p9-Jam" secondAttribute="trailing" constant="20" id="Inl-fR-p6F"/>
                             <constraint firstItem="EgW-p9-Jam" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="bzh-XX-qTX"/>
                             <constraint firstAttribute="bottom" secondItem="frk-K8-aod" secondAttribute="bottom" constant="20" id="enc-oT-YZ7"/>
+                            <constraint firstItem="EgW-p9-Jam" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="l8z-mK-ta1"/>
                             <constraint firstItem="frk-K8-aod" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="q1O-Vw-v5l"/>
                             <constraint firstItem="frk-K8-aod" firstAttribute="top" secondItem="EgW-p9-Jam" secondAttribute="bottom" constant="8" id="wZE-DS-cp5"/>
                         </constraints>

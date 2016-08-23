@@ -43,6 +43,19 @@ class ViewController: NSViewController {
 	}
 	
 	@IBAction func onSearchAction(sender: AnyObject) {
+		if (searchField.stringValue.characters.count > 0) {
+			let key: String = searchField.stringValue.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
+			
+			let engine: SearchEngine = getSearchEngine()
+			let imageEngine: SearchEngine = getImageSearchEngine()
+			
+			let searchEngineUrl: String = engine.url + key + engine.id
+			let imageSearchEngineUrl: String = imageEngine.url + key + imageEngine.id
+			
+			print(searchEngineUrl)
+			print(imageSearchEngineUrl)
+			
+		}
 	}
 	
 }

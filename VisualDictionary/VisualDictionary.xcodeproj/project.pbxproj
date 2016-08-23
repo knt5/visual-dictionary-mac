@@ -14,6 +14,8 @@
 		1888E7C11D672F9B0013ED39 /* VisualDictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7C01D672F9B0013ED39 /* VisualDictionaryTests.swift */; };
 		1888E7CC1D672F9B0013ED39 /* VisualDictionaryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7CB1D672F9B0013ED39 /* VisualDictionaryUITests.swift */; };
 		18CC3F271D6B346300140D34 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CC3F261D6B346300140D34 /* WebKit.framework */; };
+		18E4E3D51D6C7BC6005B907B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4E3D41D6C7BC6005B907B /* Config.swift */; };
+		18E4E3D71D6C7E67005B907B /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4E3D61D6C7E67005B907B /* SearchEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1888E7CB1D672F9B0013ED39 /* VisualDictionaryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualDictionaryUITests.swift; sourceTree = "<group>"; };
 		1888E7CD1D672F9B0013ED39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18CC3F261D6B346300140D34 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		18E4E3D41D6C7BC6005B907B /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		18E4E3D61D6C7E67005B907B /* SearchEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				1888E7B21D672F9A0013ED39 /* Assets.xcassets */,
 				1888E7B41D672F9B0013ED39 /* Main.storyboard */,
 				1888E7B71D672F9B0013ED39 /* Info.plist */,
+				18E4E3D41D6C7BC6005B907B /* Config.swift */,
+				18E4E3D61D6C7E67005B907B /* SearchEngine.swift */,
 			);
 			path = VisualDictionary;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1888E7B11D672F9A0013ED39 /* ViewController.swift in Sources */,
+				18E4E3D71D6C7E67005B907B /* SearchEngine.swift in Sources */,
 				1888E7AF1D672F9A0013ED39 /* AppDelegate.swift in Sources */,
+				18E4E3D51D6C7BC6005B907B /* Config.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

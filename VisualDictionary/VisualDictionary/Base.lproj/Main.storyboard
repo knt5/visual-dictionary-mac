@@ -683,16 +683,10 @@
                                         <subviews>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="21r-dw-xNO">
                                                 <rect key="frame" x="-2" y="-3" width="382" height="26"/>
-                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="m7w-BK-5Qy" id="gxp-Xq-YBk">
+                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="gxp-Xq-YBk">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
-                                                    <menu key="menu" id="Cjv-z3-ial">
-                                                        <items>
-                                                            <menuItem title="Item 1" state="on" id="m7w-BK-5Qy"/>
-                                                            <menuItem title="Item 2" id="XhH-U2-euy"/>
-                                                            <menuItem title="Item 3" id="JgH-wR-xaM"/>
-                                                        </items>
-                                                    </menu>
+                                                    <menu key="menu" id="Cjv-z3-ial"/>
                                                 </popUpButtonCell>
                                             </popUpButton>
                                             <webView translatesAutoresizingMaskIntoConstraints="NO" id="OiN-Tv-bWS">
@@ -718,16 +712,10 @@
                                         <subviews>
                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pu6-fw-Tae">
                                                 <rect key="frame" x="-2" y="-3" width="378" height="26"/>
-                                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dT9-1X-Zfr" id="88x-E3-uyb">
+                                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="88x-E3-uyb">
                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="menu"/>
-                                                    <menu key="menu" id="9vT-fR-a9v">
-                                                        <items>
-                                                            <menuItem title="Item 1" state="on" id="dT9-1X-Zfr"/>
-                                                            <menuItem title="Item 2" id="9A8-qp-Zvi"/>
-                                                            <menuItem title="Item 3" id="MV9-F9-0fs"/>
-                                                        </items>
-                                                    </menu>
+                                                    <menu key="menu" id="9vT-fR-a9v"/>
                                                 </popUpButtonCell>
                                             </popUpButton>
                                             <webView translatesAutoresizingMaskIntoConstraints="NO" id="dX2-zD-BoK">
@@ -755,10 +743,13 @@
                             </splitView>
                             <searchField wantsLayer="YES" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EgW-p9-Jam">
                                 <rect key="frame" x="20" y="558" width="760" height="22"/>
-                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="q4Y-Bo-CgL">
+                                <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" sendsWholeSearchString="YES" id="q4Y-Bo-CgL">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <connections>
+                                        <action selector="onSearchAction:" target="XfG-lQ-9wD" id="WBM-7P-fDO"/>
+                                    </connections>
                                 </searchFieldCell>
                             </searchField>
                         </subviews>
@@ -772,6 +763,12 @@
                             <constraint firstItem="frk-K8-aod" firstAttribute="top" secondItem="EgW-p9-Jam" secondAttribute="bottom" constant="8" id="wZE-DS-cp5"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageSearchEnginePopUpButton" destination="pu6-fw-Tae" id="F96-gD-k7R"/>
+                        <outlet property="mainView" destination="m2S-Jp-Qdl" id="hxD-fX-ARf"/>
+                        <outlet property="searchEnginePopUpButton" destination="21r-dw-xNO" id="uAG-NT-7vu"/>
+                        <outlet property="searchField" destination="EgW-p9-Jam" id="qiD-5C-4aU"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

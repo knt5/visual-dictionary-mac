@@ -764,7 +764,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dictionaryWebView" destination="OiN-Tv-bWS" id="rMt-q2-Tbv"/>
                         <outlet property="imageSearchEnginePopUpButton" destination="pu6-fw-Tae" id="F96-gD-k7R"/>
+                        <outlet property="imageWebView" destination="dX2-zD-BoK" id="uAb-1y-WMB"/>
                         <outlet property="mainView" destination="m2S-Jp-Qdl" id="hxD-fX-ARf"/>
                         <outlet property="searchEnginePopUpButton" destination="21r-dw-xNO" id="uAG-NT-7vu"/>
                         <outlet property="searchField" destination="EgW-p9-Jam" id="qiD-5C-4aU"/>

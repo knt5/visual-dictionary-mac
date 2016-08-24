@@ -11,6 +11,7 @@ import Foundation
 class Config {
 	private let searchEngines: [SearchEngine]
 	private let imageSearchEngines: [SearchEngine]
+	let speaking: Bool
 	
 	init() {
 		searchEngines = [
@@ -20,6 +21,8 @@ class Config {
 		imageSearchEngines = [
 			SearchEngine(name:"Google", url:"https://www.google.co.jp/search?tbm=isch&safe=high&q=")
 		]
+		
+		speaking = true
 	}
 	
 	func getSearchEngines() -> [SearchEngine] {

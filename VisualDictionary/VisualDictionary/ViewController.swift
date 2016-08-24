@@ -7,12 +7,15 @@
 //
 
 import Cocoa
+import WebKit
 
 class ViewController: NSViewController {
 	@IBOutlet var mainView: NSView!
 	@IBOutlet weak var searchField: NSSearchField!
 	@IBOutlet weak var searchEnginePopUpButton: NSPopUpButton!
 	@IBOutlet weak var imageSearchEnginePopUpButton: NSPopUpButton!
+	@IBOutlet weak var dictionaryWebView: WebView!
+	@IBOutlet weak var imageWebView: WebView!
 	
 	private let config: Config = Config()
 	
@@ -44,17 +47,18 @@ class ViewController: NSViewController {
 	
 	@IBAction func onSearchAction(sender: AnyObject) {
 		if (searchField.stringValue.characters.count > 0) {
+			// Get keyword
 			let key: String = searchField.stringValue.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.alphanumericCharacterSet())!
 			
+			// Create URL
 			let engine: SearchEngine = getSearchEngine()
 			let imageEngine: SearchEngine = getImageSearchEngine()
-			
 			let searchEngineUrl: String = engine.url + key + engine.id
 			let imageSearchEngineUrl: String = imageEngine.url + key + imageEngine.id
 			
-			print(searchEngineUrl)
-			print(imageSearchEngineUrl)
-			
+			// Load web pages
+			dictionaryWebView.mainFrameURL = searchEngineUrl
+			imageWebView.mainFrameURL = imageSearchEngineUrl
 		}
 	}
 	

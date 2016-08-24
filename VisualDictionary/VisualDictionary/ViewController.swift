@@ -53,7 +53,7 @@ class ViewController: NSViewController {
 	
 	@IBAction func onSearchAction(sender: AnyObject) {
 		if (searchField.stringValue.characters.count > 0) {
-			// Start speaking keyword
+			// Start speaking keyword (Recommended speech voice is "Samantha")
 			if (config.speaking) {
 				textView.string = searchField.stringValue
 				textView.startSpeaking(nil)

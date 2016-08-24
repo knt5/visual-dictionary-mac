@@ -3,7 +3,7 @@
 //  VisualDictionary
 //
 //  Created by apple on 2016/08/19.
-//  Copyright © 2016年 Kenta Motomura. All rights reserved.
+//  Copyright © 2016 Kenta Motomura. All rights reserved.
 //
 
 import Cocoa
@@ -33,6 +33,12 @@ class ViewController: NSViewController {
 		config.getImageSearchEngines().forEach { (engine : SearchEngine) -> () in
 			imageSearchEnginePopUpButton.addItemWithTitle(engine.name)
 		}
+		
+		// Set preferences to WebView
+		dictionaryWebView.preferencesIdentifier = "dictionary"
+		imageWebView.preferencesIdentifier = "image"
+		dictionaryWebView.preferences.javaScriptEnabled = false
+		dictionaryWebView.preferences.loadsImagesAutomatically = false
 	}
 	
 	// Get a selected search engine for dictionary

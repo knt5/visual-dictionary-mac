@@ -3,7 +3,7 @@
 //  VisualDictionary
 //
 //  Created by apple on 2016/08/23.
-//  Copyright © 2016年 Kenta Motomura. All rights reserved.
+//  Copyright © 2016 Kenta Motomura. All rights reserved.
 //
 
 import Foundation

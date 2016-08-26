@@ -9,13 +9,18 @@
 import Foundation
 
 class Config {
-	private let searchEngines: [SearchEngine]
-	private let imageSearchEngines: [SearchEngine]
-	let speaking: Bool
+	private var searchEngines: [SearchEngine] = []
+	private var imageSearchEngines: [SearchEngine] = []
+	var speaking: Bool = true
 	
 	init() {
+		self.setDefaultSettings()
+	}
+	
+	func setDefaultSettings() {
 		searchEngines = [
-			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea")
+			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea"),
+			SearchEngine(name:"Weblio", url:"http://ejje.weblio.jp/content/")
 		]
 		
 		imageSearchEngines = [

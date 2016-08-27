@@ -14,10 +14,6 @@ class Config {
 	var speaking: Bool = true
 	
 	init() {
-		self.setDefaultSettings()
-	}
-	
-	func setDefaultSettings() {
 		searchEngines = [
 			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea"),
 			SearchEngine(name:"Weblio", url:"http://ejje.weblio.jp/content/")
@@ -29,7 +25,7 @@ class Config {
 		
 		speaking = true
 	}
-	
+
 	func getSearchEngines() -> [SearchEngine] {
 		return searchEngines
 	}

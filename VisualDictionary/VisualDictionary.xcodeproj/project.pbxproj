@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182022571D75BEAA007C4603 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182022561D75BEAA007C4603 /* PreferencesViewController.swift */; };
 		1888E7AF1D672F9A0013ED39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7AE1D672F9A0013ED39 /* AppDelegate.swift */; };
 		1888E7B11D672F9A0013ED39 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1888E7B01D672F9A0013ED39 /* ViewController.swift */; };
 		1888E7B31D672F9A0013ED39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1888E7B21D672F9A0013ED39 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182022561D75BEAA007C4603 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		1888E7AB1D672F9A0013ED39 /* VisualDictionary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisualDictionary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1888E7AE1D672F9A0013ED39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1888E7B01D672F9A0013ED39 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				1888E7B71D672F9B0013ED39 /* Info.plist */,
 				18E4E3D41D6C7BC6005B907B /* Config.swift */,
 				18E4E3D61D6C7E67005B907B /* SearchEngine.swift */,
+				182022561D75BEAA007C4603 /* PreferencesViewController.swift */,
 			);
 			path = VisualDictionary;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182022571D75BEAA007C4603 /* PreferencesViewController.swift in Sources */,
 				1888E7B11D672F9A0013ED39 /* ViewController.swift in Sources */,
 				18E4E3D71D6C7E67005B907B /* SearchEngine.swift in Sources */,
 				1888E7AF1D672F9A0013ED39 /* AppDelegate.swift in Sources */,

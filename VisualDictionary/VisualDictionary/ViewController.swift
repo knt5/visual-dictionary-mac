@@ -18,9 +18,6 @@ class ViewController: NSViewController {
 	@IBOutlet weak var dictionaryWebView: WebView!
 	@IBOutlet weak var imageWebView: WebView!
 	
-	// App config
-	private let config: Config = Config()
-	
 	// TextView for speech
 	private let textView: NSTextView = NSTextView(frame: NSMakeRect(-1, -1, 0, 0))
 	
@@ -38,12 +35,12 @@ class ViewController: NSViewController {
 		// Setup UI
 		
 		// Add search engines to PopUpButton
-		config.getSearchEngines().forEach { (engine : SearchEngine) -> () in
+		Config.getSearchEngines().forEach { (engine : SearchEngine) -> () in
 			searchEnginePopUpButton.addItemWithTitle(engine.name)
 		}
 		
 		// Add image search engines to PopUpButton
-		config.getImageSearchEngines().forEach { (engine : SearchEngine) -> () in
+		Config.getImageSearchEngines().forEach { (engine : SearchEngine) -> () in
 			imageSearchEnginePopUpButton.addItemWithTitle(engine.name)
 		}
 		
@@ -62,20 +59,20 @@ class ViewController: NSViewController {
 	//============================================================
 	// Get selected search engine for dictionary
 	private func getSearchEngine() -> SearchEngine {
-		return config.getSearchEngines()[searchEnginePopUpButton.indexOfSelectedItem]
+		return Config.getSearchEngines()[searchEnginePopUpButton.indexOfSelectedItem]
 	}
 	
 	//============================================================
 	// Get selected image search engine
 	private func getImageSearchEngine() -> SearchEngine {
-		return config.getImageSearchEngines()[imageSearchEnginePopUpButton.indexOfSelectedItem]
+		return Config.getImageSearchEngines()[imageSearchEnginePopUpButton.indexOfSelectedItem]
 	}
 	
 	//============================================================
 	@IBAction func onSearchAction(sender: AnyObject) {
 		if (searchField.stringValue.characters.count > 0) {
 			// Start speaking keyword (Recommended speech voice is "Samantha")
-			if (config.speaking) {
+			if (Config.speech) {
 				textView.string = searchField.stringValue
 				textView.startSpeaking(nil)
 			}

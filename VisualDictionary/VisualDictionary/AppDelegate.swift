@@ -16,4 +16,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 	func applicationWillTerminate(aNotification: NSNotification) {
 	}
+	
+	func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+		if (flag == false) {
+			sender.windows[0].makeKeyAndOrderFront(self)
+		} else {
+			sender.windows[0].orderFront(self)
+		}
+		return true
+	}
+	
+	/*
+	func applicationShouldTerminateAfterLastWindowClosed(sender: NSApplication) -> Bool {
+		return true
+	}
+	*/
 }

@@ -27,22 +27,6 @@ class Config {
 		"imageSearchEngines": [
 			SearchEngine(name:"Google", url:"https://www.google.co.jp/search?tbm=isch&safe=high&q=")
 		]
-		
-		/*
-		// Speech
-		static let speech: Bool = true
-		
-		// Dictionary search engine
-		static let searchEngines: [SearchEngine] = [
-			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea"),
-			SearchEngine(name:"Weblio", url:"http://ejje.weblio.jp/content/")
-		]
-		
-		// Image search engine
-		static let imageSearchEngines: [SearchEngine] = [
-			SearchEngine(name:"Google", url:"https://www.google.co.jp/search?tbm=isch&safe=high&q=")
-		]
-		*/
 	]
 	
 	//============================================================
@@ -71,7 +55,7 @@ class Config {
 			return load("speech") as! Bool
 		}
 		set(v) {
-			save("speech", value:v);
+			save("speech", value:v)
 		}
 	}
 	
@@ -86,57 +70,4 @@ class Config {
 	static func getImageSearchEngines() -> [SearchEngine] {
 		return defaults["imageSearchEngines"] as! [SearchEngine]
 	}
-	
-	
-	
-	/*
-	private var userDefaults: NSUserDefaults
-	private var searchEngines: [SearchEngine]
-	private var imageSearchEngines: [SearchEngine]
-	private var speech: Bool
-	
-	init() {
-		userDefaults = NSUserDefaults.standardUserDefaults()
-		
-		searchEngines = [
-			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea"),
-			SearchEngine(name:"Weblio", url:"http://ejje.weblio.jp/content/")
-		]
-		
-		imageSearchEngines = [
-			SearchEngine(name:"Google", url:"https://www.google.co.jp/search?tbm=isch&safe=high&q=")
-		]
-		
-		speech = true
-	}
-
-	func getSearchEngines() -> [SearchEngine] {
-		return searchEngines
-	}
-	
-	func getImageSearchEngines() -> [SearchEngine] {
-		return imageSearchEngines
-	}
-	
-	func getSpeechState() -> Bool {
-		return true;
-	}
-	
-	func saveSpeechState() -> Bool {
-		
-		return true;
-	}
-	
-	// Load config
-	private func load() -> Bool {
-		return true
-	}
-	
-	// Save config
-	private func save() -> Bool {
-		//let defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
-		//defaults.setObject("aaa", forKey: "searchTarget")
-		return true
-	}
-	*/
 }

@@ -57,6 +57,33 @@ class ViewController: NSViewController {
 	}
 	
 	//============================================================
+	override func viewWillAppear() {
+		super.viewWillAppear()
+		
+		// Set window position and size
+		resizeWindow(self.view.window!, width: Config.mainWindowFrame.size.width, height: Config.mainWindowFrame.size.height)
+	}
+	
+	//============================================================
+	private func resizeWindow(window: NSWindow, width: CGFloat, height: CGFloat) {
+		// Get config
+		var frame: NSRect = Config.mainWindowFrame
+		
+		// Set position to frame
+		let x: CGFloat = window.frame.origin.x
+		let y: CGFloat = window.frame.origin.y
+		frame.origin.x = x
+		frame.origin.y = y
+		
+		// Set size to frame
+		frame.size.width = width
+		frame.size.height = height
+		
+		// Set frame to window
+		window.setFrame(frame, display: window.visible)
+	}
+	
+	//============================================================
 	// Get selected search engine for dictionary
 	private func getSearchEngine() -> SearchEngine {
 		return Config.getSearchEngines()[searchEnginePopUpButton.indexOfSelectedItem]

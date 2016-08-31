@@ -13,7 +13,13 @@ class Config {
 	
 	//============================================================
 	// Default settings
-	private static let defaults = [
+	private static let defaults: Dictionary = [
+		// Main window position and size
+		//"window.main.x": 40.0,
+		//"window.main.y": 40.0,
+		"window.main.width": 800.0,
+		"window.main.height": 600.0,
+		
 		// Speech
 		"speech": true,
 		
@@ -58,6 +64,40 @@ class Config {
 			save("speech", value:v)
 		}
 	}
+	
+	// Main window position
+	/*
+	class var mainWindowPosition: NSPoint {
+		get {
+			let x: CGFloat = load("window.main.x") as! CGFloat
+			let y: CGFloat = load("window.main.y") as! CGFloat
+			return NSMakePoint(x, y)
+		}
+		set(point) {
+			save("window.main.x", value:point.x)
+			save("window.main.y", value:point.y)
+		}
+	}
+	*/
+	
+	// Main window frame
+	class var mainWindowFrame: NSRect {
+		get {
+			//let x: CGFloat = load("window.main.x") as! CGFloat
+			//let y: CGFloat = load("window.main.y") as! CGFloat
+			let w: CGFloat = load("window.main.width") as! CGFloat
+			let h: CGFloat = load("window.main.height") as! CGFloat
+			//return NSMakeRect(x, y, w, h)
+			return NSMakeRect(0.0, 0.0, w, h)
+		}
+		set(rect) {
+			//save("window.main.x", value:rect.origin.x)
+			//save("window.main.y", value:rect.origin.y)
+			save("window.main.width", value:rect.size.width)
+			save("window.main.height", value:rect.size.height)
+		}
+	}
+	
 	
 	// searchEngines
 	// - This version has the default setting only

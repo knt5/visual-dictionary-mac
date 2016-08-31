@@ -15,6 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 
 	func applicationWillTerminate(aNotification: NSNotification) {
+		// Save window size
+		let mainWindow: NSWindow = App.getMainWindow()
+		Config.mainWindowFrame = mainWindow.frame
 	}
 	
 	func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {

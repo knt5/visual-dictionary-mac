@@ -53,7 +53,7 @@ class Config {
 	}
 	
 	//============================================================
-	// Setting interfaces
+	// Config interface
 	
 	// Speech
 	class var speech: Bool {
@@ -98,6 +98,8 @@ class Config {
 		}
 	}
 	
+	//----------------------------------------
+	// Default only
 	
 	// searchEngines
 	// - This version has the default setting only

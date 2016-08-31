@@ -60,8 +60,22 @@ class ViewController: NSViewController {
 	override func viewWillAppear() {
 		super.viewWillAppear()
 		
-		// Set window position and size
-		resizeWindow(self.view.window!, width: Config.mainWindowFrame.size.width, height: Config.mainWindowFrame.size.height)
+		// Get main window
+		let window: NSWindow = self.view.window!
+		
+		// Store to App
+		App.setMainWindow(window)
+		
+		// Set window size
+		resizeWindow(window, width: Config.mainWindowFrame.size.width, height: Config.mainWindowFrame.size.height)
+		
+		// Organize window position
+		let screen: NSScreen = window.screen!
+		let screenHeight: CGFloat = screen.frame.size.height
+		let menuHeight: CGFloat = screenHeight - (screen.visibleFrame.origin.y + screen.visibleFrame.size.height)
+		if (screenHeight - (window.frame.origin.y + window.frame.size.height) < menuHeight) {
+			window.cascadeTopLeftFromPoint(NSMakePoint(window.frame.origin.x, menuHeight))
+		}
 	}
 	
 	//============================================================

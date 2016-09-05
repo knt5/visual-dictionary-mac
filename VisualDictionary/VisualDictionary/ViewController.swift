@@ -52,8 +52,11 @@ class ViewController: NSViewController {
 		imageWebView.preferencesIdentifier = "image"
 		
 		// Set preferences to block Ads
-		dictionaryWebView.preferences.javaScriptEnabled = false
-		dictionaryWebView.preferences.loadsImagesAutomatically = false
+		updateDictionaryWebViewOptions()
+		
+		//============================================================
+		// Store to App
+		App.setViewController(self)
 	}
 	
 	//============================================================
@@ -75,6 +78,17 @@ class ViewController: NSViewController {
 		let menuHeight: CGFloat = screenHeight - (screen.visibleFrame.origin.y + screen.visibleFrame.size.height)
 		if (screenHeight - (window.frame.origin.y + window.frame.size.height) < menuHeight) {
 			window.cascadeTopLeftFromPoint(NSMakePoint(window.frame.origin.x, menuHeight))
+		}
+	}
+	
+	//============================================================
+	internal func updateDictionaryWebViewOptions() {
+		if (Config.adBlcok == true) {
+			dictionaryWebView.preferences.javaScriptEnabled = false
+			dictionaryWebView.preferences.loadsImagesAutomatically = false
+		} else {
+			dictionaryWebView.preferences.javaScriptEnabled = true
+			dictionaryWebView.preferences.loadsImagesAutomatically = true
 		}
 	}
 	

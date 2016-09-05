@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
@@ -483,7 +483,7 @@
                 <windowController id="m7C-qN-oP6" sceneMemberID="viewController">
                     <window key="window" title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ry4-mb-GlZ">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
-                        <rect key="contentRect" x="0.0" y="0.0" width="320" height="160"/>
+                        <rect key="contentRect" x="0.0" y="0.0" width="340" height="160"/>
                         <rect key="screenRect" x="1440" y="0.0" width="1920" height="1057"/>
                     </window>
                     <connections>
@@ -499,7 +499,7 @@
             <objects>
                 <viewController id="p0K-A0-cKj" customClass="PreferencesViewController" customModule="VisualDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="MvZ-TU-wHs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="160"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Au-tQ-HoW">
@@ -512,9 +512,20 @@
                                     <action selector="onPushSpeechCheckbox:" target="p0K-A0-cKj" id="DqC-pL-iC6"/>
                                 </connections>
                             </button>
+                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLd-s0-G9L">
+                                <rect key="frame" x="18" y="104" width="295" height="18"/>
+                                <buttonCell key="cell" type="check" title="Ad block (Not to load images and JavaScript)" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="Oj6-7J-z7f">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="onPushAdBlockCheckbox:" target="p0K-A0-cKj" id="c1g-b3-CTN"/>
+                                </connections>
+                            </button>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="adBlockCheckboxButton" destination="gLd-s0-G9L" id="fyN-sg-v6M"/>
                         <outlet property="speechCheckboxButton" destination="6Au-tQ-HoW" id="e12-Qd-1dM"/>
                     </connections>
                 </viewController>

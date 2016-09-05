@@ -23,6 +23,9 @@ class Config {
 		// Speech
 		"speech": true,
 		
+		// Ad block
+		"adBlcok": false,
+		
 		// Dictionary search engine
 		"searchEngines": [
 			SearchEngine(name:"ALC", url:"http://eow.alc.co.jp/search?q=", id:"#resultsArea"),
@@ -62,6 +65,16 @@ class Config {
 		}
 		set(v) {
 			save("speech", value:v)
+		}
+	}
+	
+	// Ad block
+	class var adBlcok: Bool {
+		get {
+			return load("adBlcok") as! Bool
+		}
+		set(v) {
+			save("adBlcok", value:v)
 		}
 	}
 	

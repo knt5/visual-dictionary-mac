@@ -11,6 +11,7 @@ import Cocoa
 class PreferencesViewController: NSViewController {
 	// UI
 	@IBOutlet weak var speechCheckboxButton: NSButton!
+	@IBOutlet weak var adBlockCheckboxButton: NSButton!
 	
 	//============================================================
 	override func viewDidLoad() {
@@ -23,5 +24,10 @@ class PreferencesViewController: NSViewController {
 	//============================================================
 	@IBAction func onPushSpeechCheckbox(sender: AnyObject) {
 		Config.speech = (speechCheckboxButton.state != 0)
+	}
+	
+	@IBAction func onPushAdBlockCheckbox(sender: AnyObject) {
+		Config.adBlcok = (adBlockCheckboxButton.state != 0)
+		App.getViewController().updateDictionaryWebViewOptions()
 	}
 }

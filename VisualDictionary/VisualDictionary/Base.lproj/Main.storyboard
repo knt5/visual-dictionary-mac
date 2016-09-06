@@ -622,7 +622,7 @@
                                     </customView>
                                 </subviews>
                                 <holdingPriorities>
-                                    <real value="250"/>
+                                    <real value="251"/>
                                     <real value="250"/>
                                 </holdingPriorities>
                             </splitView>
@@ -655,6 +655,7 @@
                         <outlet property="mainView" destination="m2S-Jp-Qdl" id="hxD-fX-ARf"/>
                         <outlet property="searchEnginePopUpButton" destination="21r-dw-xNO" id="uAG-NT-7vu"/>
                         <outlet property="searchField" destination="EgW-p9-Jam" id="qiD-5C-4aU"/>
+                        <outlet property="splitView" destination="frk-K8-aod" id="X5f-Ax-sWA"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

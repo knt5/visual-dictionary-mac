@@ -17,6 +17,7 @@ class ViewController: NSViewController {
 	@IBOutlet weak var imageSearchEnginePopUpButton: NSPopUpButton!
 	@IBOutlet weak var dictionaryWebView: WebView!
 	@IBOutlet weak var imageWebView: WebView!
+	@IBOutlet weak var splitView: NSSplitView!
 	
 	// TextView for speech
 	private let textView: NSTextView = NSTextView(frame: NSMakeRect(-1, -1, 0, 0))

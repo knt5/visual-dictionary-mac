@@ -19,6 +19,7 @@ class PreferencesViewController: NSViewController {
 		
 		// Setup UI
 		speechCheckboxButton.state = Int(Config.speech)
+		adBlockCheckboxButton.state = Int(Config.adBlcok)
 	}
 	
 	//============================================================

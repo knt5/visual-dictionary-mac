@@ -46,6 +46,12 @@ class ViewController: NSViewController {
 		}
 		
 		//============================================================
+		// Setup autosave
+		
+		// Split view's divider position
+		splitView.autosaveName = "splitView"
+		
+		//============================================================
 		// Set preferences of WebView
 		
 		// Set preferences ID to separate preferences of WebViews

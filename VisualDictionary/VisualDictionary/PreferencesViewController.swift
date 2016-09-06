@@ -17,7 +17,7 @@ class PreferencesViewController: NSViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Setup UI
+		// Update UI
 		speechCheckboxButton.state = Int(Config.speech)
 		adBlockCheckboxButton.state = Int(Config.adBlcok)
 	}

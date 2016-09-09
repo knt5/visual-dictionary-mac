@@ -8,3 +8,4 @@
 
 - Mac OS X ^10.11
 - Xcode ^7.3.1
+- Swift ^2.2

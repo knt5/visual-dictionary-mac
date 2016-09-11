@@ -1,5 +1,7 @@
 # Visual dictionary for Mac
 
+![screen shot](docs/images/screenshot.png)
+
 ## Requirements
 
 - Mac OS X ^10.11

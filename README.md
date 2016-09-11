@@ -2,6 +2,10 @@
 
 ![screen shot](docs/images/screenshot.png)
 
+## Download
+
+Download from [releases](https://github.com/knt5/visual-dictionary-mac/releases)
+
 ## Requirements
 
 - Mac OS X 10.11 or later

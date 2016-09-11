@@ -1,8 +1,12 @@
-# Visual dictionary for Mac
+# Visual dictionary
+
+for Mac
 
 ![screen shot](docs/images/screenshot.png)
 
 ## Download
+
+<img src="VisualDictionary/VisualDictionary/Assets.xcassets/AppIcon.appiconset/icon_256x256.png" width="128" height="128" alt="icon">
 
 Download from [releases](https://github.com/knt5/visual-dictionary-mac/releases)
 

@@ -14,6 +14,11 @@ Download from [releases](https://github.com/knt5/visual-dictionary-mac/releases)
 
 - Mac OS X 10.11 or later
 
+## Recommended voice
+
+- Samantha
+  - How to install: [YouTube](https://www.youtube.com/watch?v=N6BOLPLsc6k)
+
 ## Development requirements
 
 - Mac OS X ```^10.11```
